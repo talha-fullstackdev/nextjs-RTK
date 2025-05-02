@@ -4,12 +4,11 @@ import { useSelector } from "react-redux";
 const ShowEmployee = () => {
   const [data, setData] = useState([]);
   const employeeData = useSelector((data) => data.employees);
-  console.log(data)
+  console.log(data);
   const handleDelete = (id) => {
     const filterData = data.filter((item) => item.id !== id);
     setData(filterData);
-    return alert(`deleted succesfully `)
-
+    return alert(`deleted succesfully `);
   };
   useEffect(() => {
     setData(employeeData);
