@@ -2,7 +2,6 @@
 import React, { useRef } from "react";
 import { add } from "../reduxtoolkit/slice";
 import { useDispatch } from "react-redux";
-
 const AddEmployee = () => {
   const nameRef = useRef();
   const dispatch = useDispatch();
