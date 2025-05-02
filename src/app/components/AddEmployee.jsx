@@ -7,18 +7,17 @@ const AddEmployee = () => {
   const nameRef = useRef();
   const dispatch = useDispatch();
   const handleAdd = () => {
-    let name = nameRef.current.value
-    if(!name){
-        return alert("fill the input!")
+    let name = nameRef.current.value;
+    if (!name) {
+      return alert("fill the input!");
     }
-    if(name.length<5){
-        return alert("input must be five characters long!")
+    if (name.length < 5) {
+      return alert("input must be five characters long!");
     }
 
     dispatch(add(name));
-    nameRef.current.value=" "
-    return alert("data has been uploaded")
- 
+    nameRef.current.value = " ";
+    return alert("data has been uploaded");
   };
   return (
     <div>
